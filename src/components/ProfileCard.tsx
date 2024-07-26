@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 

@@ -1,3 +1,5 @@
+'use client'
+
 import { useRouter } from "next/navigation"
 import { useState, ChangeEvent } from "react"
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'

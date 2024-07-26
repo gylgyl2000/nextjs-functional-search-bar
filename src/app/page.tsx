@@ -1,3 +1,5 @@
+'use client'
+
 import Home from "@/app/home/page"
 import { Suspense } from "react"
 
