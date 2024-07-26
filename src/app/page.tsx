@@ -39,9 +39,8 @@ export default function Home() {
     return (
         <section className="h-[100vh] w-screen px-[2rem] md:px-[6rem] mt-[100px]">
             <p className="mb-10 ">Affichage de {totalUser} {totalUser > 1 ? "utilisateurs" : "utilisateur"}</p>
-            <Suspense fallback={<SearchBarFallback />}>
                 <SearchInput defaultValue={searchQuery} />
-            </Suspense>
+            <Suspense fallback={<SearchBarFallback />}>
             <div className="mt-8">
                 {totalUser === 0 ? <p>Aucun résultat</p> : (
                     <div className="m-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-center gap-8">
@@ -61,6 +60,7 @@ export default function Home() {
                     </div>
                 )}
             </div>
+                </Suspense>
         </section>
     )
 }
