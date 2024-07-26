@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/nextjs-functional-search-bar",
     output: "export",
+    basePath: "/nextjs-functional-search-bar",
     reactStrictMode: true,
     images: {
         unoptimized: true,
@@ -9,6 +9,7 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: 'random-person-generator.com',
+                port: '',
                 pathname: '/storage/**'
             }
         ],
