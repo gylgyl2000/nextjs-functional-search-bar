@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/nextjs-functional-search-bar",
+    // basePath: "/nextjs-functional-search-bar",
     output: "export",
     reactStrictMode: true,
     images: {
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: "https",
