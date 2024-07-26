@@ -11,6 +11,10 @@ export default function Home() {
     const searchParams = useSearchParams()
     const searchQuery = searchParams && searchParams.get("q")
 
+    function SearchBarFallback() {
+      return <>placeholder</>
+    }
+
     useEffect(() => {
         const handleSearch = () => {
             const findUser = Users.filter((user) => {
@@ -35,7 +39,7 @@ export default function Home() {
     return (
         <section className="h-[100vh] w-screen px-[2rem] md:px-[6rem] mt-[100px]">
             <p className="mb-10 ">Affichage de {totalUser} {totalUser > 1 ? "utilisateurs" : "utilisateur"}</p>
-            <Suspense>
+            <Suspense fallback={<SearchBarFallback />}>
                 <SearchInput defaultValue={searchQuery} />
             </Suspense>
             <div className="mt-8">
