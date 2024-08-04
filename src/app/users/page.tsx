@@ -1,6 +1,6 @@
 
 'use client'
-import { useState, useEffect, Suspense } from "react"
+import { useState, useEffect } from "react"
 import { ProfileCard } from "@/components/ProfileCard"
 import { SearchInput } from "@/components/SearchInput"
 // import { data, iProfile } from "@/services/data"
@@ -37,9 +37,7 @@ const UsersPage = () => {
   return (
     <section className="h-[100vh] w-screen px-[2rem] md:px-[6rem] mt-[100px]">
         <p className="mb-10 ">Affichage de {totalUsers} {totalUsers > 1 ? "utilisateurs" : "utilisateur"}</p>
-        <Suspense>
-            <SearchInput defaultValue={searchQuery} />
-        </Suspense>
+        <SearchInput defaultValue={searchQuery} />
         <div className="mt-8">
             {totalUsers === 0 ? <p>Aucun résultat</p> : (
                 <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
