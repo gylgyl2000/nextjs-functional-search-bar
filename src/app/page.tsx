@@ -1,4 +1,4 @@
-import UsersPage from '@/app/users/page2';
+import UsersPage from '@/app/users/page'
 
 export default function Home() {
 
