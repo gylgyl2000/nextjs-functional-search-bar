@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
-export const ProfileCard = ({ name, email, username, role, photo }: UserProfileCard) => {
+export const ProfileCard = ({ name, email, username, role, photo }: Readonly<UserProfileCard>) => {
 
     return (
         <div className="w-full bg-white rounded-[15px] border border-solid">

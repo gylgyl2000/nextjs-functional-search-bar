@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import { useRouter } from "next/navigation"
 import { useState, ChangeEvent } from "react"
@@ -28,7 +28,8 @@ export const SearchInput = ({ defaultValue }: iDefault) => {
             <input type="text"
                 id="inputId"
                 placeholder="Entrez un mot-clé"
-                value={inputValue ?? ""} onChange={handleChange}
+                value={inputValue ?? ""}
+                onChange={handleChange}
                 onKeyDown={handleKeyPress}
                 className="bg-[transparent] outline-none border-none w-full py-3 pl-2 pr-3" />
         </div>
