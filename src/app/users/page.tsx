@@ -10,7 +10,7 @@ import { useSearchParams } from 'next/navigation'
 const UsersPage = () => {
     const [userProfileData, setUserProfileData] = useState<UserProfile[]>([])
     const searchParams = useSearchParams()
-    const searchQuery = searchParams && searchParams.get("q");
+    const searchQuery = searchParams && searchParams.get("search");
 
     useEffect(() => {
         const handleSearch = () => {
