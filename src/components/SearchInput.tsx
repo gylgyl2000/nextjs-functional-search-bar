@@ -12,7 +12,7 @@ export const SearchInput = ({ defaultValue }: iDefault) => {
     }
 
     const handleSearch = () => {
-        if (inputValue) return router.push(`/?q=${inputValue}`)
+        if (inputValue) return router.push(`/?search=${inputValue}`)
         if (!inputValue) return router.push("/")
     }
 
