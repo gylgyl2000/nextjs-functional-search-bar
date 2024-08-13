@@ -1,14 +1,13 @@
 
 'use client'
+
 import { useState, useEffect } from "react"
 import { ProfileCard } from "@/components/ProfileCard"
 import { SearchInput } from "@/components/SearchInput"
-// import { data, iProfile } from "@/services/data"
 import { Users } from "@/lib/users"
 import { useSearchParams } from 'next/navigation'
 
 const UsersPage = () => {
-//   const [profileData, setProfileData] = useState<iProfile[]>([])
     const [userProfileData, setUserProfileData] = useState<UserProfile[]>([])
     const searchParams = useSearchParams()
     const searchQuery = searchParams && searchParams.get("q");
@@ -40,7 +39,7 @@ const UsersPage = () => {
         <SearchInput defaultValue={searchQuery} />
         <div className="mt-8">
             {totalUsers === 0 ? <p>Aucun résultat</p> : (
-                <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
+                <div className="m-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-center gap-8">
                     {userProfileData.map((user, index) => (
                             <div key={index}>
                                 <ProfileCard
